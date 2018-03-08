@@ -6,7 +6,7 @@ and separated by a comma and space. It then copies the output back to the
 clipboard.
 
 Useful for taking data from sources such as https://apps.automeris.io/wpd/ and
-pasting it into Python scripts as a tuple to plot it.
+pasting it into Python scripts as a list of tuples to plot it.
 
 Note the decimal separator must be a period.
 """
