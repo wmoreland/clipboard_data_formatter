@@ -1,2 +1,2 @@
-# clipboard_data_formatter
+# Clipboard Data Formatter
 Takes data from clipboard, formats it, puts it back to clipboard
