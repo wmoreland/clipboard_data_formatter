@@ -17,7 +17,7 @@ import pyperclip
 import csv
 
 try:
-    df = pandas.read_clipboard(header=None, sep=',|\t|;|\s', engine='python')
+    df = pandas.read_clipboard(header=None, sep=',|\t', engine='python')
 
     try:
         df[0] = '[' + df[0].map(str) + ', ' + df[1].map(str) + '],'
@@ -25,11 +25,8 @@ try:
     
         df.to_csv(outbuf, columns=[0], header=False, index=False,
                   sep='|', quoting=csv.QUOTE_NONE)
-#        df.to_csv('test_output.csv', columns=[0], header=False, index=False,
-#                  sep='|', quoting=csv.QUOTE_NONE)
         
         pyperclip.copy(outbuf.getvalue())
-#        print(pyperclip.paste())
         
     except KeyError:
         print('KeyError: Clipboard does not contain two columns of data')
